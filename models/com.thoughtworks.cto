@@ -4,19 +4,42 @@
 
 namespace com.thoughtworks
 
-participant User identified by email {
-  o String email
+participant User identified by name {
+  o String name
 }
 
 asset Pig identified by assetId {
   o String assetId
+  o String farm
+  o String checkedBy
+  o Status status
 }
 
 asset Meat identified by assetId {
   o String assetId
+  o String checkedBy
+  o Status status
+  --> Pig pig
+}
+
+enum Status {
+  o None
+  o Permitted
+  o Rejected
 }
 
 transaction Slice {
   --> Pig pig
   --> Meat[] meats
 }
+
+transaction CheckMeat {
+  --> Meat meat
+  o String checkedBy
+}
+
+transaction CheckPig {
+  --> Pig pig
+  o String checkedBy
+}
+
