@@ -1,0 +1,22 @@
+/**
+ * Write your model definitions here
+ */
+
+namespace com.thoughtworks
+
+participant User identified by email {
+  o String email
+}
+
+asset Pig identified by assetId {
+  o String assetId
+}
+
+asset Meat identified by assetId {
+  o String assetId
+}
+
+transaction Slice {
+  --> Pig pig
+  --> Meat[] meats
+}

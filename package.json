@@ -1,0 +1,22 @@
+{
+  "name": "supplychain-network",
+  "version": "0.0.2",
+  "description": "supplychain",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "dorahacks",
+  "email": "fan.torchz@gmail.com",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "composer-admin": "latest",
+    "composer-client": "latest",
+    "composer-common": "latest",
+    "composer-connector-embedded": "latest",
+    "chai": "latest",
+    "eslint": "latest",
+    "istanbul": "latest",
+    "mkdirp": "latest",
+    "mocha": "latest"
+  }
+}
