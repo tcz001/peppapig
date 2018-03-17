@@ -26,6 +26,7 @@ enum Status {
   o None
   o Permitted
   o Rejected
+  o Sliced
 }
 
 transaction Slice {
